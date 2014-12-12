@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           delete weibo ad
-// @description    Yes
+// @description    删除微博广告
 // @version        1.0
 // @author         Lich
 // @namespace      http://weibo.com/

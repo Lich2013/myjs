@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           delete tieba ad
-// @description    Yes
-// @version        2.0
+// @description    删除贴吧广告
+// @version        2.3
 // @author         Lich
 // @namespace      http://*.baidu.com/
 // @include        http://tieba.baidu.com/*
@@ -59,14 +59,55 @@ function g (h) {
 }
 function h (i) {
 	setTimeout(function  () {
-			i (a);
+			i (j);
 		}, 0);	
-	var ad = document.getElementById('__bdyx_tips');
+	var ad = document.querySelector('div#__bdyx_tips.bdyx_tips_');
 	ad.parentNode.removeChild(ad);	
 }
-function i () {
+function i (j) {
+	setTimeout(function  () {
+			j (k);
+		}, 0);	
 	var ad2 = document.querySelector('.j_game_banner');
 	ad2.parentNode.removeChild(ad2);	
 }
-
+function j (k) {
+	setTimeout(function  () {
+			k (l);
+		}, 0);
+	var attention = document.querySelector('div#pop_animate');
+	attention.parentNode.removeChild(attention);	
+}
+function k (l) {
+	setTimeout(function  () {
+			l (m);
+		}, 0);
+	var ad3 = document.querySelector('.iframe_wrapper.clearfix');
+	ad3.parentNode.removeChild(ad3);	
+}
+function l (m) {
+	setTimeout(function  () {
+			m (n);
+		}, 0);
+	var ad4 = document.querySelector('.dasense_iframe');
+	ad4.parentNode.removeChild(ad4);	
+}
+function m (n) {
+	setTimeout(function  () {
+			n (o);
+		}, 0);
+	var ad5 = document.querySelector('div.baidutuisong.baidutuisong-3');
+	ad5.parentNode.removeChild(ad5);	
+}
+function n (o) {
+	setTimeout(function  () {
+			o ();
+		}, 0);
+	var ad6 = document.querySelector('div.baidu-tuisong-wrap');
+	ad6.parentNode.removeChild(ad6);	
+}
+function o () {
+	var ad7 = document.querySelector('#global_notice_wrap');
+	ad7.parentNode.removeChild(ad7);	
+}
 a(b);
