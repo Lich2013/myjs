@@ -6,108 +6,124 @@
 // @namespace      http://*.baidu.com/
 // @include        http://tieba.baidu.com/*
 // ==/UserScript==
-function a (b) {
+var loop = 0;
+function a () {
 		setTimeout(function  () {
-			b (c);
+			b ();
 		}, 0);
 		var x = document.querySelector('.close_btn.j_click_stats');
 		x.click();
 }
-function b (c) {
+function b () {
 	setTimeout(function  () {
-			c (d);
+			c ();
 		}, 0);	
 	var ad1 = document.querySelectorAll('div.t_con.clearfix');
 	for (var i = 0; i < ad1.length; i++) {
 			ad1[i].parentNode.removeChild(ad1[i]);
 		};	
 }
-function c (d) {
+function c () {
 	setTimeout(function  () {
-			d (e);
+			d ();
 		}, 0);	
 	var reader = document.querySelector('.baidutuisong-2.baidutuisong');
 	reader.parentNode.removeChild(reader);
 }
-function d (e) {
+function d () {
 	setTimeout(function  () {
-			e (f);
+			e ();
 		}, 0);
 	var fire = document.querySelector('.firework_sender_wrap');
 	fire.parentNode.removeChild(fire);	
 }
-function e (f) {
+function e () {
 	setTimeout(function  () {
-			f (g);
+			f ();
 		}, 0);	
 	var left = document.querySelector('.hover_btn');
 	left.parentNode.removeChild(left);
 }
-function f (g) {
+function f () {
 	setTimeout(function  () {
-			g (h);
+			g ();
 		}, 0);	
 	var bear = document.querySelector('.baidutuisong-xiaoxiong');
 	bear.parentNode.removeChild(bear);
 }
-function g (h) {
+function g () {
 	setTimeout(function  () {
-			h (i);
+			h ();
 		}, 0);	
 	var pic = document.querySelector('img.hover_btn');
 	pic.parentNode.removeChild(pic);
 }
-function h (i) {
+function h () {
 	setTimeout(function  () {
-			i (j);
+			i ();
 		}, 0);	
-	var ad = document.querySelector('div#__bdyx_tips.bdyx_tips_');
+	var ad = document.querySelector('#__bdyx_tips');
 	ad.parentNode.removeChild(ad);	
 }
-function i (j) {
+function i () {
 	setTimeout(function  () {
-			j (k);
+			j ();
 		}, 0);	
 	var ad2 = document.querySelector('.j_game_banner');
 	ad2.parentNode.removeChild(ad2);	
 }
-function j (k) {
+function j () {
 	setTimeout(function  () {
-			k (l);
+			k ();
 		}, 0);
 	var attention = document.querySelector('div#pop_animate');
 	attention.parentNode.removeChild(attention);	
 }
-function k (l) {
+function k () {
 	setTimeout(function  () {
-			l (m);
+			l ();
 		}, 0);
 	var ad3 = document.querySelector('.iframe_wrapper.clearfix');
 	ad3.parentNode.removeChild(ad3);	
 }
-function l (m) {
+function l () {
 	setTimeout(function  () {
-			m (n);
+			m ();
 		}, 0);
 	var ad4 = document.querySelector('.dasense_iframe');
 	ad4.parentNode.removeChild(ad4);	
 }
-function m (n) {
+function m () {
 	setTimeout(function  () {
-			n (o);
+			n ();
 		}, 0);
 	var ad5 = document.querySelector('div.baidutuisong.baidutuisong-3');
 	ad5.parentNode.removeChild(ad5);	
 }
-function n (o) {
-	setTimeout(function  () {
+function n () {
+	setTimeout(function  () {			
 			o ();
 		}, 0);
 	var ad6 = document.querySelector('div.baidu-tuisong-wrap');
 	ad6.parentNode.removeChild(ad6);	
 }
 function o () {
+	setTimeout(function  () {			
+			control ();
+		}, 0);
 	var ad7 = document.querySelector('#global_notice_wrap');
 	ad7.parentNode.removeChild(ad7);	
 }
+function control ()
+{	
+	if (loop<3) {
+		++loop;
+	setTimeout(function  () {			
+			a ();
+		}, 0);
+	}
+	else
+		return;
+}
+
 a(b);
