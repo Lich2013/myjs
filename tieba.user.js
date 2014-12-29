@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           delete tieba ad
 // @description    删除贴吧广告
-// @version        2.3
+// @version        2.4
 // @author         Lich
 // @namespace      http://*.baidu.com/
 // @include        http://tieba.baidu.com/*
@@ -109,10 +109,19 @@ function n () {
 }
 function o () {
 	setTimeout(function  () {			
-			control ();
+			p ();
 		}, 0);
 	var ad7 = document.querySelector('#global_notice_wrap');
 	ad7.parentNode.removeChild(ad7);	
+}
+function p () {
+	setTimeout(function  () {			
+			control ();
+		}, 0);
+	var ad8 = document.querySelectorAll('.l_post_bright.clearfix')
+	for (var i = 0; i < ad8.length; i++) {
+	 	ad8[i].parentNode.removeChild(ad8[i]);
+	 }; 
 }
 function control ()
 {	
